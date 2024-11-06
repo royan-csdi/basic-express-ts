@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  db:
+    image: postgres
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    volumes:
+      - trainingdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - training-network
+
+volumes:
+  trainingdata:
+
+networks:
+  training-network:
+    driver: bridge

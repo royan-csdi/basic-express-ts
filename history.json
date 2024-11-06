@@ -1,0 +1,30 @@
+[
+  {
+    "operation": "add",
+    "valueA": 2,
+    "valueB": 1,
+    "result": 3,
+    "date": "2024-10-31T22:36:31.588Z"
+  },
+  {
+    "operation": "multiply",
+    "valueA": 2,
+    "valueB": 5,
+    "result": 10,
+    "date": "2024-10-31T22:38:01.527Z"
+  },
+  {
+    "operation": "divide",
+    "valueA": 10,
+    "valueB": 2,
+    "result": 5,
+    "date": "2024-10-31T22:38:46.290Z"
+  },
+  {
+    "operation": "divide",
+    "valueA": 30,
+    "valueB": 10,
+    "result": 3,
+    "date": "2024-11-02T05:54:21.720Z"
+  }
+]

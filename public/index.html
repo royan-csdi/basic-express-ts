@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Book Management</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      #book-list {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Book Management</h1>
+    <div id="book-list"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("/books")
+          .then((response) => response.json())
+          .then((data) => {
+            const bookList = document.getElementById("book-list");
+            data.data.forEach((book) => {
+              const bookItem = document.createElement("div");
+              bookItem.textContent = `${book.title} by ${book.author}`;
+              bookList.appendChild(bookItem);
+            });
+          });
+      });
+    </script>
+  </body>
+</html>
